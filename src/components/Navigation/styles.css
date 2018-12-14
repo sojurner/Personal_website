@@ -77,6 +77,11 @@ li:hover::before {
   width: 110%;
 }
 
+ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
 .tab-active {
   background: rgb(53, 58, 75);
 }
@@ -151,6 +156,7 @@ li:hover::before {
   background-color: rgba(94, 13, 13, 0.345);
   top: 0;
   transition: 0.4s;
+  width: 100vw;
 }
 
 .navbar-hide {

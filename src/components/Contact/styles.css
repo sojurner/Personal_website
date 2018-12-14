@@ -1,0 +1,72 @@
+.contact-section {
+  position: absolute;
+  right: 1rem;
+  top: 7rem;
+}
+
+.fa-github-square,
+.fa-discord,
+.fa-mobile,
+.fa-envelope-square {
+  font-size: 2.5rem;
+  margin: 1rem 2rem 1rem 0rem;
+  color: rgb(91, 58, 58);
+  border-radius: 50%;
+}
+
+.fa-github-square:hover,
+.fa-discord:hover,
+.fa-mobile:hover,
+.fa-envelope-square:hover {
+  color: rgb(126, 76, 76);
+  border: 10px solid color rgb(91, 58, 58);
+  background: rgb(91, 58, 58);
+  animation: pulse 1s linear infinite;
+}
+
+.contact_icon-tooltip {
+  position: relative;
+}
+
+.tooltip {
+  color: white;
+  position: absolute;
+  background: rgb(77, 41, 41);
+  border-radius: 0.5rem;
+  right: 1rem;
+  font-family: gruppo;
+  font-size: 1.4rem;
+  bottom: -1rem;
+  width: 8rem;
+  animation: slideInRight 0.2s linear;
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@font-face {
+  font-family: gruppo;
+  src: url(../../assets/fonts/Gruppo-Regular.ttf);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(189, 155, 211, 0.367);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(211, 130, 105, 0.134);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(157, 158, 158, 0);
+  }
+}

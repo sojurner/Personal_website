@@ -20,7 +20,7 @@
 }
 
 .about,
-.projects,
+.work,
 .other {
   scroll-snap-align: start;
 }

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Navigation } from '../Navigation';
+import Navigation from '../Navigation';
+import { About } from '../About';
+import { Other } from '../Other';
+import { Work } from '../Work';
 import './App.css';
 
 class App extends Component {
@@ -32,7 +35,8 @@ class App extends Component {
     const { current, previous, menuDisplay } = this.state;
     return (
       <div className="App">
-        <section className="about">
+        <section id="About" className="about">
+          <About />
           <Navigation
             current={current}
             previous={previous}
@@ -45,11 +49,11 @@ class App extends Component {
             className="background-img"
           />
         </section>
-        <section className="projects">
-          <h1>projects</h1>
+        <section id="Work" className="work">
+          <Work />
         </section>
-        <section className="other">
-          <h1>other</h1>
+        <section id="Other" className="other">
+          <Other />
         </section>
       </div>
     );

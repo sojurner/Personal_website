@@ -1,0 +1,23 @@
+.about-section {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.about-title {
+  align-self: center;
+  font-size: 4rem;
+  width: 40vw;
+  text-align: left;
+}
+
+.about-content {
+  align-self: center;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: aliceblue;
+  width: 30vw;
+  margin-right: 4rem;
+}
