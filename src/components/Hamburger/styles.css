@@ -5,12 +5,12 @@
   cursor: pointer;
   z-index: 11;
   position: absolute;
-  top: 5.5rem;
+  top: 5rem;
   left: 50vw;
 }
 .hamburger {
   width: 40px;
-  height: 4px;
+  height: 6px;
   background: rgb(208, 208, 208);
   position: absolute;
   top: 0%;
@@ -25,7 +25,7 @@
   position: absolute;
   width: 40px;
   left: 10px;
-  height: 4px;
+  height: 6px;
   background: rgb(208, 208, 208);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -39,7 +39,7 @@
 .hamburger:hover,
 .hamburger:hover::before,
 .hamburger:hover::after {
-  background: rgb(244, 244, 244);
+  background: rgb(99, 61, 61);
 }
 
 .hamburger-wrapper.menu-active .hamburger {
@@ -59,4 +59,16 @@
 .hamburger-wrapper.menu-active .hamburger::after {
   top: 0;
   transform: rotate(135deg);
+}
+
+@keyframes pulse-2 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(189, 155, 211, 0.367);
+  }
+  50% {
+    box-shadow: 0 0 0 3.5px rgba(211, 130, 105, 0.134);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(157, 158, 158, 0);
+  }
 }
