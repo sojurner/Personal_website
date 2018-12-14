@@ -1,28 +1,24 @@
 import React from 'react';
-import { Nav, Navbar, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
+import { Logo } from '../Logo';
+import { Hamburger } from '../Hamburger';
+
 import './styles.css';
 
-export const Navigation = () => {
+export const Navigation = ({ current, previous, handleMenu, menuDisplay }) => {
   return (
-    <Navbar>
-      <Navbar.Header>
-        <Navbar.Brand>John Tan</Navbar.Brand>
-      </Navbar.Header>
-      <Nav>
-        <NavItem eventKey={1} href="#">
-          About
-        </NavItem>
-        <NavItem eventKey={2} href="#">
-          Projects
-        </NavItem>
-        <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-          <MenuItem eventKey={3.1}>Action</MenuItem>
-          <MenuItem eventKey={3.2}>Another action</MenuItem>
-          <MenuItem eventKey={3.3}>Something else here</MenuItem>
-          <MenuItem divider />
-          <MenuItem eventKey={3.4}>Separated link</MenuItem>
-        </NavDropdown>
-      </Nav>
-    </Navbar>
+    <nav className={current > previous ? 'navbar navbar-hide' : 'navbar'}>
+      <Logo />
+      <div className={menuDisplay ? 'col-lg overlay-active' : 'col-lg overlay'}>
+        <h1>Menu</h1>
+        <nav>
+          <ul>
+            <li>About</li>
+            <li>Work</li>
+            <li>Other</li>
+          </ul>
+        </nav>
+      </div>
+      <Hamburger menuDisplay={menuDisplay} handleMenu={handleMenu} />
+    </nav>
   );
 };

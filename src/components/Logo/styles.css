@@ -1,0 +1,14 @@
+.name-logo {
+  font-family: allura;
+  color: aliceblue;
+  text-align: left;
+  margin: 0.8rem 1.5rem;
+  position: absolute;
+  width: 10rem;
+  font-size: 3rem;
+}
+
+@font-face {
+  font-family: allura;
+  src: url(../../assets/fonts/Allura-Regular.ttf);
+}
