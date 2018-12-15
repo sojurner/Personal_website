@@ -6,7 +6,7 @@ export const Contact = ({ handleHover, tooltipDisplay, label }) => {
   console.log(tooltipDisplay);
   const contactIcons = [
     {
-      className: 'fas fa-mobile',
+      className: 'fas fa-mobile-alt',
       tooltip: '951-801-1918',
       label: 'mobile'
     },
@@ -20,7 +20,7 @@ export const Contact = ({ handleHover, tooltipDisplay, label }) => {
       tooltip: 'jctan05',
       label: 'github'
     },
-    { className: 'fab fa-discord', tooltip: 'discord', label: 'discord' }
+    { className: 'fab fa-linkedin', tooltip: 'linkedin', label: 'Linkedin' }
   ];
   return (
     <nav className="contact-section">

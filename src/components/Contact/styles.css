@@ -6,8 +6,9 @@
 
 .fa-github-square,
 .fa-discord,
-.fa-mobile,
-.fa-envelope-square {
+.fa-mobile-alt,
+.fa-envelope-square,
+.fa-linkedin {
   font-size: 2.5rem;
   margin: 1rem 2rem 1rem 0rem;
   color: rgb(91, 58, 58);
@@ -16,8 +17,9 @@
 
 .fa-github-square:hover,
 .fa-discord:hover,
-.fa-mobile:hover,
-.fa-envelope-square:hover {
+.fa-mobile-alt:hover,
+.fa-envelope-square:hover,
+.fa-linkedin:hover {
   color: rgb(126, 76, 76);
   background: rgb(91, 58, 58);
   animation: pulse 1s linear infinite;
