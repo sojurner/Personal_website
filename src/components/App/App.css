@@ -32,3 +32,8 @@ section h1 {
 .App-link {
   color: #61dafb;
 }
+
+@font-face {
+  font-family: gruppo;
+  src: url(../../assets/fonts/Gruppo-Regular.ttf);
+}

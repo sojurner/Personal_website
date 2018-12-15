@@ -1,24 +1,27 @@
 .work-section {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .work-title {
-  font-size: 10rem;
+  font-size: 9rem;
   width: 40vw;
 }
 
 .work-content {
+  background-color: rgba(80, 49, 49, 0.164);
+
   width: 40vw;
+  font-size: 2rem;
   color: aliceblue;
   align-self: center;
-  font-size: 1.3rem;
+
   line-height: 2rem;
 }
 
 .fa-confluence {
-  font-size: 7rem;
-  margin-right: 1rem;
+  font-size: 5rem;
+  margin: 0 2rem -5rem 0;
   color: rgb(211, 211, 208);
 }

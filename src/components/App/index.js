@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from '../Navigation';
 import { About } from '../About';
-import { Other } from '../Other';
+import Other from '../Other';
 import { Work } from '../Work';
 import './App.css';
 

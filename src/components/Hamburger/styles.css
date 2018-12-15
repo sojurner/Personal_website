@@ -16,7 +16,6 @@
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: 0.5s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 .hamburger::before,
@@ -28,7 +27,7 @@
   height: 6px;
   background: rgb(208, 208, 208);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 .hamburger:before {
   top: -13px;
