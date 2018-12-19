@@ -45,7 +45,7 @@ class App extends Component {
           />
 
           <img
-            src="http://profilepicturesdp.com/wp-content/uploads/2018/06/cool-background-for-profile-pictures-10.jpg"
+            src="http://images.unsplash.com/photo-1530482817083-29ae4b92ff15?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9"
             className="background-img"
           />
         </section>

@@ -9,7 +9,7 @@
   width: 40vw;
 }
 
-.work-content {
+/* .work-content {
   background-color: rgba(80, 49, 49, 0.164);
 
   width: 40vw;
@@ -18,10 +18,21 @@
   align-self: center;
 
   line-height: 2rem;
-}
+} */
 
 .fa-confluence {
   font-size: 5rem;
   margin: 0 2rem -5rem 0;
   color: rgb(211, 211, 208);
+}
+
+.carousel {
+  position: relative;
+  width: 45vw;
+  height: 100vh;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Logo } from '../Logo';
 import { Hamburger } from '../Hamburger';
+import { Menu } from '../Menu';
 import { Contact } from '../Contact';
 
 import './styles.css';
@@ -25,20 +26,7 @@ class Navigation extends React.Component {
     return (
       <nav className={current > previous ? 'navbar navbar-hide' : 'navbar'}>
         <Logo />
-        <div
-          className={menuDisplay ? 'col-lg overlay-active' : 'col-lg overlay'}
-        >
-          <h1>Menu</h1>
-          <ul>
-            {menu.map(item => {
-              return (
-                <li onClick={handleMenu}>
-                  <a href={`#${item}`}>{item}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <Menu menu={menu} menuDisplay={menuDisplay} handleMenu={handleMenu} />
         <Hamburger menuDisplay={menuDisplay} handleMenu={handleMenu} />
         <Contact
           handleHover={this.handleHover}

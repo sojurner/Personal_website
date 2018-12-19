@@ -13,35 +13,39 @@
   top: 0;
   left: 0;
   right: 0;
-  opacity: 0;
   z-index: -1;
+  background: #202021d6;
+
   animation: bounceOutUp 1s linear;
 }
 .col-lg.overlay-active {
   opacity: 1;
+  background: #202021d6;
+
   animation: bounceInDown 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: 10;
 }
 .overlay h1,
 .overlay-active h1 {
   position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(43vw, 75vh, 0);
   font-size: 100px;
   font-family: Poppins;
   font-weight: 800;
   color: rgb(133, 13, 13);
+  margin: -50px 0 0 -50px;
+  width: max-content;
 }
+
 ul {
   position: absolute;
-  top: 35%;
-  left: 51%;
-  transform: translate(-50%, -50%);
+  transform: translate(50vw, 50vh);
   list-style: none;
   margin: 0;
   padding: 0;
+  margin: -13rem 0 0 -8rem;
 }
+
 li {
   padding: 0.4rem 0.9rem;
   margin: 2rem 0;
@@ -82,6 +86,11 @@ ul li a {
   color: rgb(143, 56, 56);
 }
 
+ul li a:hover {
+  text-decoration: none;
+  color: rgb(143, 56, 56);
+}
+
 .tab-active {
   background: rgb(53, 58, 75);
 }
@@ -107,40 +116,48 @@ ul li a {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
-    opacity: 0;
+    opacity: 0.5;
     -webkit-transform: translate3d(0, -3000px, 0);
     transform: translate3d(0, -3000px, 0);
   }
   60% {
-    opacity: 0.5;
+    opacity: 0.75;
     -webkit-transform: translate3d(0, 25px, 0);
     transform: translate3d(0, 25px, 0);
   }
   90% {
+    opacity: 1;
     -webkit-transform: translate3d(0, 5px, 0);
     transform: translate3d(0, 5px, 0);
   }
   to {
+    opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }
 @keyframes bounceOutUp {
   0% {
-    opacity: 0.48;
+    opacity: 1;
     z-index: inherit;
   }
   20% {
+    opacity: 0.8;
+
     -webkit-transform: translate3d(0, -10px, 0);
     transform: translate3d(0, -10px, 0);
   }
   40%,
   45% {
+    opacity: 0.5;
+
     -webkit-transform: translate3d(0, 20px, 0);
     transform: translate3d(0, 20px, 0);
   }
 
   65% {
+    opacity: 0.3;
+
     transform: translate((0, -800px, 0));
   }
   to {
@@ -153,10 +170,13 @@ ul li a {
 
 .navbar {
   position: absolute;
-  background-color: rgba(41, 2, 2, 0.523);
+  background-color: rgba(28, 28, 28, 0.45);
   top: 0;
+  -webkit-transition: top 0.4s ease-in-out;
   transition: top 0.4s ease-in-out;
   width: 100vw;
+  margin: 0;
+  height: 7rem;
 }
 
 .navbar-hide {
