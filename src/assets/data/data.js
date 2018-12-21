@@ -38,10 +38,10 @@ export const projectsData = [
   }
 ];
 
-export const eduction = [
+export const education = [
   {
-    start_date: 200,
-    end_date: 2015,
+    start_date: 2009,
+    end_date: 2013,
     institution: 'University of Denver',
     education: 'BA Political Science'
   },
@@ -61,7 +61,7 @@ export const eduction = [
 
 export const experience = [
   {
-    company: 'FULBRIGHT & JAWORSKI INTERNATIONAL LLP',
+    company: 'FULBRIGHT & JAWORSKI',
     title: 'Junior Associate',
     start_date: 2013,
     end_date: 2016
@@ -77,5 +77,31 @@ export const experience = [
     title: 'Web Developer',
     start_date: 2018,
     end_date: 'now'
+  }
+];
+
+export const contact = [
+  {
+    className: 'fas fa-mobile-alt',
+    tooltip: '951-801-1918',
+    label: 'mobile'
+  },
+  {
+    className: 'fas fa-envelope-square',
+    tooltip: 'G-mail',
+    link: 'benjamin.paige@gmail.com',
+    label: 'email'
+  },
+  {
+    className: 'fab fa-github-square',
+    tooltip: 'Github',
+    link: 'https://github.com/benjaminpaige',
+    label: 'github'
+  },
+  {
+    className: 'fab fa-linkedin',
+    tooltip: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/benjaminpaige/',
+    label: 'linkedin'
   }
 ];
