@@ -1,8 +1,11 @@
 .other-section {
   color: white;
-  height: 90vh;
+  height: 100vh;
   font-size: 1.3rem;
-  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  /* line-height: 2rem; */
+  justify-content: space-between;
   text-align: left;
   margin: 3rem 6rem;
   position: relative;
@@ -11,91 +14,54 @@
 .interest-board {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  width: 60vw;
+  justify-content: center;
+  align-content: center;
 }
 
 .other-title {
-  font-size: 3rem;
+  font-size: 9rem;
+  justify-self: center;
+  align-self: center;
+  width: 30vw;
+  padding-left: 2rem;
+  padding-bottom: 6rem;
 }
 
 .interest-card {
   display: flex;
   justify-content: center;
+  height: 20rem;
   width: 20.5rem;
   padding: 0;
   background-color: rgba(105, 86, 117, 0.329);
-  margin: 0 1rem;
+  margin: 1.5rem;
   border-radius: 1rem;
   overflow: hidden;
+  position: relative;
+  border: 1px solid rgb(92, 92, 96);
 }
 
-.Overwatch,
-.Fortnite,
-.Body-building {
-  transition: transform 0.4s ease-in-out;
+.interest-board div img {
+  height: inherit;
+  transform: translate3d(0px, 0, 0);
 }
 
-.Overwatch-text,
-.Fortnite-text,
-.Body-building-text {
-  transform: translate3d(200px, 0, 0);
-  transition: transform 0.3s ease-in-out;
-  padding: 70px 130px;
-  width: 20rem;
-  font-size: 1.2rem;
-
-  background: rgba(7, 7, 7, 0.815);
-}
-/* 
-.interest-card:hover > .overwatch,
-.interest-card:hover > .fortnite,
-.interest-card:hover > .body-building {
-  transform: translate3d(-100px, 0px, 0);
-} */
-
-.interest-card:hover > .Body-building-text {
-  transform: translate3d(-110px, 0, 0);
-}
-
-.Overwatch {
-  height: 13rem;
-  transform: translate3d(180px, 0, 0);
-}
-
-.interest-card:hover > .Overwatch-text {
-  transform: translate3d(-200px, 0, 0);
-}
-
-.interest-card:hover > .Fortnite-text {
-  transform: translate3d(-81px, 0, 0);
-}
-
-.Body-building-text {
-  transform: translate3d(220px, 0, 0);
-}
-
-.Overwatch-text {
-  transform: translate3d(150px, 0, 0);
-}
-
-.Fortnite {
-  height: 10rem;
-  transform: translate3d(170px, 20px, 0);
-}
-
-.Fortnite-text {
-  transform: translate3d(250px, 0px, 0);
-}
-
-.Body-building {
-  height: 11rem;
-  transform: translate3d(160px, 10px, 0);
-}
-
-footer {
-  color: white;
-  font-size: 1rem;
-  bottom: 0;
-  justify-self: end;
-  align-self: end;
+.interest-text-hide,
+.interest-text {
+  height: inherit;
+  font-size: 2rem;
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.824);
+  color: white;
+  width: inherit;
+  line-height: 20vh;
+  text-align: center;
+  transform: translate3d(0, -20rem, 0);
+  transition: 0.3s linear;
+}
+
+.interest-text {
+  transform: translate3d(0, 0, 0);
 }

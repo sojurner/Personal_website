@@ -11,7 +11,8 @@
 .hamburger {
   width: 40px;
   height: 6px;
-  background: rgb(208, 208, 208);
+  background: rgb(206, 206, 206);
+
   position: absolute;
   top: 0%;
   left: 50%;
@@ -25,7 +26,7 @@
   width: 40px;
   left: 10px;
   height: 6px;
-  background: rgb(208, 208, 208);
+  background: rgb(165, 165, 165);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   transition: 0.5s ease-in-out;
 }

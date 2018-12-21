@@ -1,7 +1,24 @@
-.contact-section {
+.contact-section,
+.contact-section-hide {
   position: absolute;
-  right: 1rem;
-  top: 7rem;
+  right: 0;
+  top: 10rem;
+}
+
+.contact-section {
+  height: 10rem;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 0.5s ease-in-out;
+}
+
+.contact-section-hide {
+  transform: translate3d(0, -4rem, 0);
+  transition: 0.4s linear;
+
+  height: 0;
+  opacity: 0;
+  z-index: -2;
 }
 
 .fa-github-square,
@@ -9,10 +26,33 @@
 .fa-mobile-alt,
 .fa-envelope-square,
 .fa-linkedin {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin: 1rem 2rem 1rem 0rem;
-  color: rgb(91, 58, 58);
-  border-radius: 50%;
+  color: rgb(90, 107, 120);
+  /* border-radius: 50%; */
+  color: rgb(84, 84, 84);
+
+  cursor: pointer;
+  padding: 0;
+  text-shadow: 0.5px 0.5px rgb(179, 179, 179);
+}
+
+.fa-address-book,
+.fa-chevron-up {
+  top: 0.5rem;
+  z-index: 10;
+  right: 0;
+  position: absolute;
+  font-size: 3rem;
+  margin: 1rem 2rem 1rem 0rem;
+  transition: 0.2s linear;
+  color: rgba(208, 208, 208, 0.434);
+  cursor: pointer;
+}
+
+.fa-address-book:hover,
+.fa-chevron-up:hover {
+  color: rgb(196, 196, 196);
 }
 
 .fa-github-square:hover,
@@ -20,9 +60,7 @@
 .fa-mobile-alt:hover,
 .fa-envelope-square:hover,
 .fa-linkedin:hover {
-  color: rgb(126, 76, 76);
-  background: rgb(91, 58, 58);
-  animation: pulse 1s linear infinite;
+  color: rgb(90, 107, 120);
 }
 
 .contact_icon-tooltip {
@@ -32,14 +70,14 @@
 .tooltip {
   color: white;
   position: absolute;
-  background: rgb(77, 41, 41);
+  letter-spacing: 2px;
   border-radius: 0.5rem;
-  right: 1rem;
+  right: 10rem;
   font-family: gruppo;
   font-size: 1.4rem;
-  bottom: -1.5rem;
-  width: 8rem;
-  animation: slideInRight 0.3s ease-in-out;
+
+  width: max-content;
+  /* animation: slideInRight 0.3s ease-in-out; */
 }
 
 @keyframes slideInRight {
@@ -58,16 +96,4 @@
 @font-face {
   font-family: gruppo;
   src: url(../../assets/fonts/Gruppo-Regular.ttf);
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(189, 155, 211, 0.367);
-  }
-  50% {
-    box-shadow: 0 0 0 12px rgba(211, 130, 105, 0.134);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(157, 158, 158, 0);
-  }
 }

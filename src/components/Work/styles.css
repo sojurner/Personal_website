@@ -2,23 +2,17 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
+  height: 100vh;
+  z-index: -1;
 }
 
 .work-title {
   font-size: 9rem;
   width: 40vw;
+  margin: 25rem 0 0 0;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
-
-/* .work-content {
-  background-color: rgba(80, 49, 49, 0.164);
-
-  width: 40vw;
-  font-size: 2rem;
-  color: aliceblue;
-  align-self: center;
-
-  line-height: 2rem;
-} */
 
 .fa-confluence {
   font-size: 5rem;
@@ -29,10 +23,60 @@
 .carousel {
   position: relative;
   width: 45vw;
-  height: 100vh;
+  height: 70vh;
+  margin: auto 0;
+}
+
+.carousel-caption {
+  bottom: -2rem !important;
+  /* z-index: 1; */
+}
+
+.carousel-caption h3 {
+  font-size: 4rem;
+}
+
+.fa-github,
+.fa-code-branch {
+  font-size: 3rem;
+  margin: 2rem;
+  cursor: pointer;
+  color: rgb(193, 193, 193);
+}
+
+.fa-github:hover,
+.fa-code-branch:hover {
+  color: aliceblue;
 }
 
 .carousel-control.right,
 .carousel-control.left {
   background-image: none;
+  /* z-index: 1; */
+}
+.glyphicon-chevron-left,
+.glyphicon-chevron-right {
+  left: 50%;
+  margin-left: -10px;
+  top: 82% !important;
+
+  bottom: 0;
+}
+
+.item {
+  height: 60vh;
+}
+
+.item img {
+  height: 400px;
+  width: 400px;
+}
+
+.carousel-inner .active,
+.carousel-inner,
+.carousel-slide {
+  /* z-index: -1; */
+}
+.carousel-inner > .item > img {
+  margin: auto;
 }
