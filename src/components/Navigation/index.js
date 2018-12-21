@@ -10,18 +10,23 @@ class Navigation extends React.Component {
   constructor() {
     super();
     this.state = {
-      menu: ['About', 'Work', 'Other'],
+      menu: ['Home', 'Work', 'About', 'Other'],
       tooltipDisplay: false,
+      contactDisplay: false,
       label: ''
     };
   }
 
-  handleHover = (tooltipDisplay, label) => {
-    this.setState({ tooltipDisplay, label });
+  handleHover = label => {
+    this.setState({ label });
+  };
+
+  toggleContact = () => {
+    this.setState({ contactDisplay: !this.state.contactDisplay });
   };
 
   render() {
-    const { menu, tooltipDisplay, label } = this.state;
+    const { menu, tooltipDisplay, label, contactDisplay } = this.state;
     const { current, previous, handleMenu, menuDisplay } = this.props;
     return (
       <nav className={current > previous ? 'navbar navbar-hide' : 'navbar'}>
@@ -29,9 +34,11 @@ class Navigation extends React.Component {
         <Menu menu={menu} menuDisplay={menuDisplay} handleMenu={handleMenu} />
         <Hamburger menuDisplay={menuDisplay} handleMenu={handleMenu} />
         <Contact
+          contactDisplay={contactDisplay}
           handleHover={this.handleHover}
           tooltipDisplay={tooltipDisplay}
           label={label}
+          toggleContact={this.toggleContact}
         />
       </nav>
     );
