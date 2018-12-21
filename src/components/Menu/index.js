@@ -6,6 +6,8 @@ export const Menu = ({ menuDisplay, menu, handleMenu }) => {
   return (
     <div className={menuDisplay ? 'col-lg overlay-active' : 'col-lg overlay'}>
       <h1>Menu</h1>
+      <div className="cloud" />
+
       <ul>
         {menu.map(item => {
           return (
