@@ -1,44 +1,44 @@
 import React from 'react';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
+import { contact } from '../../assets/data/data';
 import './styles.css';
 
-export const Contact = ({ handleHover, tooltipDisplay, label }) => {
-  console.log(tooltipDisplay);
-  const contactIcons = [
-    {
-      className: 'fas fa-mobile-alt',
-      tooltip: '951-801-1918',
-      label: 'mobile'
-    },
-    {
-      className: 'fas fa-envelope-square',
-      tooltip: 'johntan05',
-      label: 'email'
-    },
-    {
-      className: 'fab fa-github-square',
-      tooltip: 'jctan05',
-      label: 'github'
-    },
-    { className: 'fab fa-linkedin', tooltip: 'linkedin', label: 'Linkedin' }
-  ];
+export const Contact = ({ handleHover, contactDisplay, toggleContact }) => {
   return (
-    <nav className="contact-section">
-      {contactIcons.map(icon => {
-        const { className, tooltip } = icon;
-        return (
-          <div
-            className="contact_icon-tooltip"
-            onMouseEnter={handleHover.bind(null, true, icon.label)}
-            onMouseLeave={handleHover.bind(null, false)}
-          >
-            <i className={className} />
-            {tooltipDisplay && icon.label === label && (
-              <p className="tooltip">{tooltip}</p>
-            )}
-          </div>
-        );
-      })}
-    </nav>
+    <div className="contact-sidebar">
+      <i
+        onClick={toggleContact}
+        className={
+          !contactDisplay ? 'fas fa-address-book' : 'fas fa-chevron-up'
+        }
+      />
+      <nav
+        className={contactDisplay ? 'contact-section' : 'contact-section-hide'}
+      >
+        {contact.map(icon => {
+          const { className, tooltip, label, link } = icon;
+          const tt = (
+            <Tooltip id={label}>
+              <strong>{tooltip}</strong>
+            </Tooltip>
+          );
+          return (
+            <OverlayTrigger placement="left" overlay={tt}>
+              <div
+                className="contact_icon-tooltip"
+                onMouseEnter={handleHover.bind(null, label)}
+                onMouseLeave={handleHover.bind(null, '')}
+              >
+                <i
+                  className={className}
+                  onClick={() => window.open(link, '_blank')}
+                />
+              </div>
+            </OverlayTrigger>
+          );
+        })}
+      </nav>
+    </div>
   );
 };
