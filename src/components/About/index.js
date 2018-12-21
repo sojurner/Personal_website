@@ -1,26 +1,61 @@
 import React from 'react';
+
+import { education, experience } from '../../assets/data/data';
 import './styles.css';
 
 export const About = () => {
+  const educationList = education.map((item, index) => {
+    const { institution, education, start_date, end_date } = item;
+    return (
+      <div key={`education-${index}`} className="timeline-education-group">
+        <span className="timeline-education-space" />
+        <span className="timeline-education-start">{start_date}</span>
+        <div className="timeline-education-box">
+          <div className="timeline-education-post">
+            <div className="timeline-education-content">
+              <p>{institution}</p>
+              <p>{education}</p>
+            </div>
+          </div>
+        </div>
+        <span className="timeline-education-end">{end_date}</span>
+      </div>
+    );
+  });
+
+  const experienceList = experience.map((item, index) => {
+    const { company, title, start_date, end_date } = item;
+    return (
+      <div key={`experience-${index}`} className="timeline-experience-group">
+        <span className="timeline-experience-space" />
+        <span className="timeline-experience-start">{start_date}</span>
+        <div className="timeline-experience-box">
+          <div className="timeline-experience-post">
+            <div className="timeline-experience-content">
+              <p>{title}</p>
+              <p>{company}</p>
+            </div>
+          </div>
+        </div>
+        <span className="timeline-experience-end">{end_date}</span>
+      </div>
+    );
+  });
+
   return (
     <section className="about-section">
-      <div className="about-header">
-        <img
-          className="about-img"
-          src="https://upload.wikimedia.org/wikipedia/en/5/5c/Loma_linda_university_logo.png"
-        />
-        <h1 className="about-title">PhD BioChemistry</h1>
+      <div className="outer-education-container">
+        <h1>Education</h1>
+        <div className="inner-education-container">
+          <div className="education-timeline">{educationList}</div>
+        </div>
       </div>
-      <p className="about-content">
-        My obsession with body building has driven me to a lifestyle fad known
-        as bulking/Cutting. The idea is you get super fat during the bulking
-        phase, eating anything and everything you can get your fat paws on. Then
-        after you get nice and chubby, you transition to a strict lean diet to
-        convert the adipose to muscle-pose. So towards the end of the bulking
-        phase I went to the Gym to lift some weights; to get my body ready for
-        the transitioin. A group of douchebags walked by and laughed at me
-        calling me a "Fat Loser". And they were right I was losing fat...
-      </p>
+      <div className="outer-experience-container">
+        <h1>Experience</h1>
+        <div className="inner-experience-container">
+          <div className="experience-timeline">{experienceList}</div>
+        </div>
+      </div>
     </section>
   );
 };
