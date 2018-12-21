@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from '../Navigation';
+import { Home } from '../Home';
 import { About } from '../About';
 import Other from '../Other';
 import { Work } from '../Work';
@@ -35,19 +36,16 @@ class App extends Component {
     const { current, previous, menuDisplay } = this.state;
     return (
       <div className="App">
-        <section id="About" className="about">
-          <About />
-          <Navigation
-            current={current}
-            previous={previous}
-            menuDisplay={menuDisplay}
-            handleMenu={this.handleMenu}
-          />
-
+        <section id="Home" className="home">
+          <Home />
           <img
             src="http://images.unsplash.com/photo-1530482817083-29ae4b92ff15?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9"
             className="background-img"
           />
+        </section>
+
+        <section id="About" className="about">
+          <About />
         </section>
         <section id="Work" className="work">
           <Work />
@@ -55,6 +53,12 @@ class App extends Component {
         <section id="Other" className="other">
           <Other />
         </section>
+        <Navigation
+          current={current}
+          previous={previous}
+          menuDisplay={menuDisplay}
+          handleMenu={this.handleMenu}
+        />
       </div>
     );
   }
